@@ -7,12 +7,12 @@ Data::Constraint - Trying to bring definitional succintness to Perl
 =cut
 
 =head1 SYNOPSIS
+    if (nonzero $value) { ; }
+    if (zero $value) { ; }
 
-if (nonzero ($value,$value2,$value3)) { ; }
-if (zero    ($value,$value2,$value3)) { ; }
 
-# do something when pagemode is one in the list.
-if (any(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS', 'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
+
+if (nonzero(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS', 'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
 
 Possibly more time-consuming, but certainly more succint!
 
@@ -43,7 +43,7 @@ use Carp;
 #	Public Global Variables
 #-----------------------------------------------------------------------
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
-$VERSION   = '1.5';
+$VERSION   = '1.4';
 @ISA       = qw(Exporter);
 @EXPORT    = qw(zero nonzero any);
 
@@ -68,14 +68,6 @@ sub nonzero
 	return 0 unless $_;
     }
     return 1;
-}
-
-sub any
-{
-    foreach (@_) {
-	return 1 if $_;
-    }
-    return 0;
 }
 
 

@@ -1,9 +1,14 @@
-head	1.4;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.5
+date	2000.02.27.03.17.41;	author end70;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2000.02.27.03.06.32;	author end70;	state Exp;
@@ -30,7 +35,7 @@ desc
 @@
 
 
-1.4
+1.5
 log
 @*** empty log message ***
 @
@@ -44,12 +49,12 @@ Data::Constraint - Trying to bring definitional succintness to Perl
 =cut
 
 =head1 SYNOPSIS
-    if (nonzero $value) { ; }
-    if (zero $value) { ; }
 
+if (nonzero ($value,$value2,$value3)) { ; }
+if (zero    ($value,$value2,$value3)) { ; }
 
-
-if (nonzero(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS', 'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
+# do something when pagemode is one in the list.
+if (any(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS', 'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
 
 Possibly more time-consuming, but certainly more succint!
 
@@ -80,7 +85,7 @@ use Carp;
 #	Public Global Variables
 #-----------------------------------------------------------------------
 use vars qw($VERSION @@ISA @@EXPORT @@EXPORT_OK);
-$VERSION   = '1.4';
+$VERSION   = '1.5';
 @@ISA       = qw(Exporter);
 @@EXPORT    = qw(zero nonzero any);
 
@@ -105,6 +110,14 @@ sub nonzero
 	return 0 unless $_;
     }
     return 1;
+}
+
+sub any
+{
+    foreach (@@_) {
+	return 1 if $_;
+    }
+    return 0;
 }
 
 
@@ -139,6 +152,26 @@ modify it under the same terms as Perl itself.
 
 1;
 
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@a9 2
+    if (nonzero $value) { ; }
+    if (zero $value) { ; }
+d11 2
+d14 2
+a15 2
+
+if (nonzero(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS', 'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
+d46 1
+a46 1
+$VERSION   = '1.4';
+d71 8
 @
 
 

@@ -1,0 +1,28 @@
+NAME
+    Data::Constraint - Trying to bring definitional succintness to Perl
+
+SYNOPSIS
+    if (nonzero $value) { ; }
+    if (zero $value) { ; }
+    if (nonzero(map { $PAGEMODE eq $_ } ('CONFIRM_OFFER', 'VIEW_DETAILS',
+    'Purchase Item', 'Confirm Counter Offer')) { handle_these_pagemodes() }
+
+    Possibly more time-consuming, but certainly more succint!
+
+DESCRIPTION
+    This module is to make constraint checking of lists of values more
+    concise.
+
+KNOWN BUGS AND LIMITATIONS
+    none
+
+SEE ALSO
+    REBOL (http://www.rebol.com)
+
+AUTHOR
+    Terrence Brannon <princepawn@yahoo.com>
+
+COPYRIGHT
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

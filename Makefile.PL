@@ -1,11 +1,41 @@
+# $Id: Makefile.PL,v 1.4 2004/08/09 18:33:52 comdog Exp $
 use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
 
-WriteMakefile(
-    'VERSION_FROM' => 'Constraint.pm',
-    'NAME'      => 'Data::Constraint',
-	      );
+eval "use Test::Manifest";
 
+unless( $@ )
+	{
+	no warnings;
 
+	*ExtUtils::MM_Any::test_via_harness = sub
+		{
+		my($self, $perl, $tests) = @_;
+	
+		return qq|	$perl "-MTest::Manifest" | .
+			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
+			qq|'\$(INST_ARCHLIB)')"\n|;
+		};
+	}
 
+WriteMakefile
+		(
+		'NAME'          => 'Data::Constraint',
+		'VERSION_FROM'  => 'lib/Constraint.pm',
+
+		'PREREQ_PM' => {
+			'Test::More'        => '0',
+			'Class::Prototyped' => '0',
+			},
+			
+		'PM'       => {
+			'lib/Constraint.pm'  => '$(INST_LIBDIR)/Constraint.pm',
+			},
+
+		'MAN3PODS' => {
+			'lib/Constraint.pm' => '$(INST_MAN3DIR)/Data::Constraint.3',
+			},
+
+		clean => { FILES => 'Data-* *.bak *.old' },
+		);
+        
+1;

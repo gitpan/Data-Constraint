@@ -1,0 +1,9 @@
+# $Id: test_manifest,v 1.2 2004/08/09 17:37:33 comdog Exp $
+compile.t
+pod.t
+get_by_name.t
+get_all_names.t
+description.t
+check.t
+add_constraint.t
+delete.t

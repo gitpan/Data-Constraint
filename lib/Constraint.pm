@@ -1,4 +1,4 @@
-# $Id: Constraint.pm,v 1.6 2006/06/16 10:31:07 comdog Exp $
+# $Id: Constraint.pm,v 1.8 2006/06/23 11:53:08 comdog Exp $
 package Data::Constraint;
 use strict;
 use vars qw($VERSION);
@@ -168,7 +168,7 @@ You wish!  This module can't help you there.
 
 =cut
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ m/(\d+) \. (\d+)/xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.8 $ =~ m/(\d+) \. (\d+)/xg;
 
 use base qw(Class::Prototyped);
 
@@ -184,7 +184,7 @@ Added a constraint with name NAME. Possible keys and values:
 
 	run            reference to subroutine to run
 	description    string that decribes the constraint
-	
+
 Example:
 
 	Data::Constraint->add_constraint(
@@ -199,7 +199,7 @@ Return a list of all the defined constraints.
 
 =item get_by_name( CONSTRAINT_NAME )
 
-Return the constraint with name CONSTRAINT_NAME. This is 
+Return the constraint with name CONSTRAINT_NAME. This is
 
 =item delete_by_name( CONSTRAINT_NAME )
 
@@ -211,12 +211,12 @@ Delete all the constraints, even the default ones.
 
 =item description
 
-Return the description. The default description is the empty string. You 
+Return the description. The default description is the empty string. You
 should supply your own description with C<add_constraint>.
 
 =item run
 
-Return the description. The default description is the empty string. You 
+Return the description. The default description is the empty string. You
 should supply your own description with C<add_constraint>.
 
 =back
@@ -293,7 +293,7 @@ members of the project can shepherd this module appropriately.
 
 =head1 AUTHOR
 
-brian d foy, C<< <comdog@panix.com> >>
+brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 

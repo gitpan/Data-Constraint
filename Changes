@@ -1,4 +1,11 @@
-# $Id: Changes,v 1.8 2006/07/08 21:09:30 comdog Exp $
+# $Id: Changes,v 1.15 2007/01/25 19:21:27 comdog Exp $
+
+1.11 - Thu Jan 25 14:21:11 2007
+	* minor fixes to the distro. No need to upgrade.
+
+1.10 - Tue Jan  9 22:05:27 2007
+	* updated copyright and license info
+	* no code changes, so no need to upgrade
 
 1.09 - Sat Jul  8 16:08:55 2006
 	* Dist fix to get PAUSE to accept this thing. It didn't like 1.08

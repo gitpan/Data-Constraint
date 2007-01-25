@@ -1,4 +1,4 @@
-# $Id: Constraint.pm,v 1.9 2006/07/08 21:08:36 comdog Exp $
+# $Id: Constraint.pm,v 1.11 2007/01/25 19:20:29 comdog Exp $
 package Data::Constraint;
 use strict;
 use vars qw($VERSION);
@@ -168,7 +168,7 @@ You wish!  This module can't help you there.
 
 =cut
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.9 $ =~ m/(\d+) \. (\d+)/xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.11 $ =~ m/(\d+) \. (\d+)/xg;
 
 use base qw(Class::Prototyped);
 
@@ -295,12 +295,14 @@ members of the project can shepherd this module appropriately.
 
 brian d foy, C<< <bdfoy@cpan.org> >>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2004-2006, brian d foy, All Rights Reserved.
+Copyright (c) 2004-2007 brian d foy.  All rights reserved.
 
-You may redistribute this under the same terms as Perl itself.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 
 1;
+

@@ -1,4 +1,4 @@
-# $Id: Constraint.pm 2488 2008-01-16 10:25:42Z comdog $
+# $Id: Constraint.pm 2486 2008-01-16 10:23:18Z comdog $
 package Data::Constraint;
 use strict;
 use vars qw($VERSION);
@@ -171,7 +171,7 @@ You wish!  This module can't help you there.
 
 =cut
 
-$VERSION = '1.16';
+$VERSION = '1.12';
 
 use base qw(Class::Prototyped);
 

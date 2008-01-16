@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Data-Constraint
-version:             1.16
+version:             1.12
 abstract:            prototypical value checking
 license:             perl
 author:              

@@ -1,14 +1,18 @@
-# $Id: Makefile.PL,v 1.6 2007/01/10 04:04:55 comdog Exp $
+# $Id: Makefile.PL 2475 2008-01-03 18:11:24Z comdog $
 use ExtUtils::MakeMaker;
+
+require 5.006;
 
 eval "use Test::Manifest 1.14";
 
 WriteMakefile
 	(
 	'NAME'          => 'Data::Constraint',
+	'ABSTRACT'      => 'prototypical value checking',
 	'VERSION_FROM'  => 'lib/Constraint.pm',
 	'LICENSE'       => 'perl',
-	
+	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
+ 	
 	'PREREQ_PM' => {
 		'Test::More'        => '0',
 		'Class::Prototyped' => '0',

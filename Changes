@@ -1,4 +1,18 @@
-# $Id: Changes,v 1.15 2007/01/25 19:21:27 comdog Exp $
+# $Id: Changes 2489 2008-01-16 10:26:17Z comdog $
+
+1.16 - Wed Jan 16 04:26:43 2008
+ * just a bump of the version for PAUSE
+
+1.12 - Wed Jan 16 04:24:50 2008
+	* Updated for the move from CVS to SVN. No need to upgrade.
+
+1.15 - Thu Jan  3 12:13:19 2008
+	* Updated for minor doc patch (RT #32028)
+	* No need to upgrade
+
+1.14 - Wed Nov 28 12:58:56 2007
+	* Cleanus for the move from CVS to SVN
+	* No need to upgrade
 
 1.11 - Thu Jan 25 14:21:11 2007
 	* minor fixes to the distro. No need to upgrade.

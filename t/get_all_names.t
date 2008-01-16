@@ -1,4 +1,4 @@
-# $Id: get_all_names.t,v 1.1 2004/08/09 17:37:33 comdog Exp $
+# $Id: get_all_names.t 1294 2004-08-09 17:37:33Z comdog $
 
 use Test::More tests => 2;
 

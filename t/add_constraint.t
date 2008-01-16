@@ -1,4 +1,4 @@
-# $Id: add_constraint.t,v 1.2 2004/08/09 18:18:08 comdog Exp $
+# $Id: add_constraint.t 1299 2004-08-09 18:18:08Z comdog $
 use strict;
 
 use Test::More tests => 6;

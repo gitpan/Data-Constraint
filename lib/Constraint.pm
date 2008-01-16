@@ -1,7 +1,10 @@
-# $Id: Constraint.pm,v 1.11 2007/01/25 19:20:29 comdog Exp $
+# $Id: Constraint.pm 2488 2008-01-16 10:25:42Z comdog $
 package Data::Constraint;
 use strict;
 use vars qw($VERSION);
+
+use warnings;
+no warnings;
 
 =head1 NAME
 
@@ -13,7 +16,7 @@ Data::Constraint - prototypical value checking
 
 	my $constraint = Data::Constraint->add_constraint(
 		'name_of_condition',
-		run         => sub { $_[1] => /Perl/ },
+		run         => sub { $_[1] =~ /Perl/ },
 		description => "String should have 'Perl' in it";
 		);
 
@@ -168,7 +171,7 @@ You wish!  This module can't help you there.
 
 =cut
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.11 $ =~ m/(\d+) \. (\d+)/xg;
+$VERSION = '1.16';
 
 use base qw(Class::Prototyped);
 
@@ -284,7 +287,7 @@ __PACKAGE__->add_constraint(
 =head1 SOURCE AVAILABILITY
 
 This source is part of a SourceForge project which always has the
-latest sources in CVS, as well as all of the previous releases.
+latest sources in SVN, as well as all of the previous releases.
 
 	http://sourceforge.net/projects/brian-d-foy/
 
@@ -297,7 +300,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2004-2007 brian d foy.  All rights reserved.
+Copyright (c) 2004-2008 brian d foy.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

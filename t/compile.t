@@ -1,7 +1,7 @@
-# $Id: compile.t 1294 2004-08-09 17:37:33Z comdog $
+use strict;
+use Test::More 0.95;
 
-use Test::More tests => 1;
+my $module = 'Data::Constraint';
+use_ok( $module ) or BAILOUT();
 
-my $module = "Data::Constraint";
-
-print "bail out! Script file is missing!" unless use_ok( $module );
+done_testing();

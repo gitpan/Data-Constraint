@@ -1,4 +1,3 @@
-# $Id: Constraint.pm 2486 2008-01-16 10:23:18Z comdog $
 package Data::Constraint;
 use strict;
 use vars qw($VERSION);
@@ -171,7 +170,7 @@ You wish!  This module can't help you there.
 
 =cut
 
-$VERSION = '1.12';
+$VERSION = '1.17';
 
 use base qw(Class::Prototyped);
 
@@ -286,13 +285,9 @@ __PACKAGE__->add_constraint(
 
 =head1 SOURCE AVAILABILITY
 
-This source is part of a SourceForge project which always has the
-latest sources in SVN, as well as all of the previous releases.
+This source is in Github:
 
-	http://sourceforge.net/projects/brian-d-foy/
-
-If, for some reason, I disappear from the world, one of the other
-members of the project can shepherd this module appropriately.
+	https://github.com/briandfoy/data-constraint
 
 =head1 AUTHOR
 
@@ -300,7 +295,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2004-2008 brian d foy.  All rights reserved.
+Copyright (c) 2004-2014 brian d foy.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
